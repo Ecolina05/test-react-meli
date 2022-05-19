@@ -1,0 +1,64 @@
+/* Background */
+.bg-white {
+  background-color: white;
+}
+
+/* Flexbox */
+.items-center {
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/* Text */
+.text-center {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 0.875em;
+  line-height: 1.25em;
+}
+
+.text-base {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.text-lg {
+  font-size: 1.25em;
+  line-height: 1.75em;
+}
+
+.text-xl {
+  font-size: 2em;
+  line-height: 2.5em;
+}
+
+/* Sizing */
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* Margin & Padding */
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
