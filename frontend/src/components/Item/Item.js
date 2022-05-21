@@ -1,15 +1,25 @@
-const Product = () => {
-  return (
-    <section className='flex'>
-      <span>imagen</span>
+import './Item.scss'
+import greenTruck from '../../assets/img/green_truck.png';
 
-      <div className='flex flex-col'>
-        <h3>$1900</h3>
-        <p className='m-0'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, animi!</p>
-        <span>Completo unico!</span>
+const Item = ({ id, image, title, price, freeShipping, availableQuantity }) => {
+
+  return (
+    <section id={id} className='item'>
+      <div className='item__info'>
+        <img src={image} className='item__image' />
+
+        <div className='flex flex-col'>
+          <h3 className='item__title'>{title}</h3>
+          <h3 className='item__price'>
+            $ {price}
+            {freeShipping ? <img src={greenTruck} width='20' /> : null}
+          </h3>
+        </div>
       </div>
+
+      <span className='item__available'>{availableQuantity} disponibles</span>
     </section>
   )
 }
 
-export default Product;
+export default Item;

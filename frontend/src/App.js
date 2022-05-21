@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import HomePage from './pages/HomePage';
 import ResultsPage from './pages/ResultsPage';
-import ProductDetails from './pages/ProductDetails';
+import ItemDetails from './pages/ItemDetails';
 import NotFoundPage from './pages/NotFoundPage';
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/items' element={<ResultsPage />} />
-          <Route path='/items/:id' element={<ProductDetails />} />
+          <Route path='/items/:id' element={<ItemDetails />} />
           <Route path='*' element={<NotFoundPage />}></Route>
         </Routes>
       </section>

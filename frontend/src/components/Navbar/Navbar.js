@@ -8,7 +8,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [search, setSearch] = useState('');
 
-  const searchProducts = (event) => {
+  const searchItems = (event) => {
     event.preventDefault();
 
     if (search) {
@@ -23,7 +23,7 @@ const Navbar = () => {
         <img src={logoMeli} alt='Meli Logo' width='50' />
       </Link>
 
-      <form onSubmit={searchProducts} className='navbar__search'>
+      <form onSubmit={searchItems} className='navbar__search'>
         <input type='text' placeholder='Nunca dejes de buscar' value={search} onChange={(event) => setSearch(event.target.value)} />
         <button type='submit' className='navbar__btn-search'>
           <img src={searchIcon} alt='Search' width='15' />

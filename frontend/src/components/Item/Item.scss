@@ -1,0 +1,37 @@
+.item {
+  align-items: center;
+  border-bottom: 1px solid rgb(233, 233, 233);
+  display: flex;
+  justify-content: space-between;
+  padding: .5em 1em .5em 1em;
+
+  &__info {
+    align-items: center;
+    display: flex;
+  }
+
+  &__image {
+    width: 180px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  &__price {
+    align-items: center;
+    display: flex;
+    font-weight: 500;
+    gap: .4em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+
+  &__available {
+    color: gray;
+    font-size: 13px;
+    width: 100px;
+  }
+}
