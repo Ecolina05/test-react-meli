@@ -1,0 +1,12 @@
+.breadcrumb {
+  color: gray;
+  display: flex;
+  gap: 1em;
+  list-style: " > ";
+  margin-top: 2em;
+  padding-left: 1em;
+
+  li {
+    text-transform: capitalize;
+  }
+}

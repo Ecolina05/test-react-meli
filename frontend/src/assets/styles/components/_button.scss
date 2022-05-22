@@ -1,0 +1,26 @@
+@import '../variables';
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  height: 45px;
+  padding: 0 24px;
+  outline: none;
+  text-align: center
+}
+
+.blue-button {
+  @extend .btn;
+
+  color: white;
+  background-color: $blue;
+}
+
+.blue-light-button {
+  @extend .btn;
+  color: $blue;
+  background-color: rgba(65, 137, 230, .15);
+}

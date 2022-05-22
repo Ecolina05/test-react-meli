@@ -1,0 +1,43 @@
+.item-details {
+  margin-top: 1.5em;
+  padding: 1em;
+
+  &__section-left {
+    width: 70%;
+
+    .picture-container {
+      display: flex;
+      gap: .5em;
+
+      .picture-small {
+        cursor: pointer;
+        height: 90px;
+        object-fit: contain;
+        width: 90px;
+      }
+
+      .main-picture {
+        height: 400px;
+        width: 400px;
+        margin: 0 auto;
+        object-fit: contain;
+      }
+    }
+
+  }
+
+  &__section-right {
+    width: 30%;
+  }
+
+  &__price {
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+    font-weight: 500;
+    gap: .4em;
+    margin-top: 0.5em;
+    margin-bottom: .5em;
+  }
+
+}

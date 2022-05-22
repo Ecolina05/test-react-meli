@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Item from '../components/Item/Item';
-import * as API from '../services/items';
+import { getItemsByParam } from '../services/items.service';
+import Breadcrumb from '../components/Breadcrumb'
+import Item from '../components/Item';
 
 const ResultsPage = () => {
   const location = useLocation();
@@ -9,8 +10,7 @@ const ResultsPage = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    console.log('pide');
-    API.getItemsByParam(param)
+    getItemsByParam(param)
       .then(response => {
         const items = [];
         response.map((item, i) => {
@@ -22,27 +22,31 @@ const ResultsPage = () => {
   }, []);
 
   return (
-    <section className='section-results bg-white'>
-      {
-        items.length === 0
-          ?
-          <h3>Cargando...</h3>
-          :
-          items.map(item => {
-            return (
-              <Item
-                key={item.id}
-                id={item.id}
-                image={item.thumbnail}
-                title={item.title}
-                price={item.price}
-                freeShipping={item.shipping.free_shipping}
-                availableQuantity={item.available_quantity}
-              />
-            );
-          })
-      }
-    </section>
+    <>
+      <Breadcrumb />
+
+      <section className='section-results bg-white'>
+        {
+          items.length === 0
+            ?
+            <h3>Cargando...</h3>
+            :
+            items.map(item => {
+              return (
+                <Item
+                  key={item.id}
+                  id={item.id}
+                  image={item.thumbnail}
+                  title={item.title}
+                  price={item.price}
+                  freeShipping={item.shipping.free_shipping}
+                  availableQuantity={item.available_quantity}
+                />
+              );
+            })
+        }
+      </section>
+    </>
   );
 }
 
