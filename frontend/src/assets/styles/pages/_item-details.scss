@@ -12,13 +12,15 @@
       .picture-small {
         cursor: pointer;
         height: 90px;
+        margin-top: 5px;
         object-fit: contain;
         width: 90px;
       }
 
       .main-picture {
-        height: 400px;
-        width: 400px;
+        height: auto;
+        max-height: 300px;
+        width: 100%;
         margin: 0 auto;
         object-fit: contain;
       }
@@ -28,6 +30,10 @@
 
   &__section-right {
     width: 30%;
+
+    @media only screen and (max-width: 1060px) {
+      width: 100%;
+    }
   }
 
   &__price {
@@ -40,4 +46,7 @@
     margin-bottom: .5em;
   }
 
+  @media only screen and (max-width: 1060px) {
+    flex-direction: column;
+  }
 }

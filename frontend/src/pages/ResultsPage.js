@@ -19,7 +19,7 @@ const ResultsPage = () => {
         setItems(items);
       })
       .catch(error => console.log(error))
-  }, []);
+  }, [param]);
 
   return (
     <>

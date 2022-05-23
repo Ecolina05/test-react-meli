@@ -3,12 +3,17 @@
   border-bottom: 1px solid rgb(233, 233, 233);
   display: flex;
   justify-content: space-between;
+  gap: 1em;
   padding: .5em 1em .5em 1em;
 
   &__info {
     align-items: center;
     display: flex;
     gap: 1.5em;
+
+    @media only screen and (max-width: 668px) {
+      flex-direction: column;
+    }
   }
 
   &__image {
@@ -35,6 +40,11 @@
   &__available {
     color: gray;
     font-size: 13px;
+    text-align: center;
     width: 100px;
+  }
+
+  @media only screen and (max-width: 668px) {
+    flex-direction: column;
   }
 }

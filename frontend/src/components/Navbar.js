@@ -13,19 +13,20 @@ const Navbar = () => {
     if (search) {
       const URL = `/items?search=${search}`;
       navigate(URL);
+      setSearch('');
     }
   }
 
   return (
     <header className='navbar container'>
       <Link to='/'>
-        <img src={logoMeli} alt='Meli Logo' width='50' />
+        <img src={logoMeli} alt='meliLogo' width='50' />
       </Link>
 
       <form onSubmit={searchItems} className='navbar__search'>
         <input type='text' placeholder='Nunca dejes de buscar' value={search} onChange={(event) => setSearch(event.target.value)} />
         <button type='submit' className='navbar__btn-search'>
-          <img src={searchIcon} alt='Search' width='15' />
+          <img src={searchIcon} alt='search' width='15' />
         </button>
       </form>
     </header>
