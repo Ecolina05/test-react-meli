@@ -1,11 +1,14 @@
-const Breadcrumb = () => {
+const Breadcrumb = ({ categories, category, itemName }) => {
   return (
     <section>
       <ul className='breadcrumb text-sm'>
-        <li>123</li>
-        <li>123</li>
-        <li>123</li>
-        <li>123</li>
+        {
+          categories?.map(category => {
+            return <li key={category.id}>{category.name}</li>
+          })
+        }
+        {category && <li>{category}</li>}
+        {itemName && <li>{itemName}</li>}
       </ul>
     </section>
   );

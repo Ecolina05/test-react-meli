@@ -18,7 +18,11 @@ const searchItem = (req, res) => {
         }
       });
 
-      res.json(items);
+      const data = {
+        items,
+        filters: response.data.filters
+      }
+      res.json(data);
     })
     .catch(error => {
       res.send(error);

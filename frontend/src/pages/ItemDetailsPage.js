@@ -26,11 +26,11 @@ const ItemDetails = () => {
         setMainPicture(reponse.pictures[0].secure_url);
       })
       .catch(error => console.log(error))
-  }, []);
+  }, [param]);
 
   return (
     <>
-      <Breadcrumb />
+      <Breadcrumb category={itemDetail.domain_id} itemName={itemDetail.title} />
 
       <section className='item-details bg-white flex justify-between'>
         <div className='item-details__section-left'>
@@ -48,6 +48,7 @@ const ItemDetails = () => {
 
           <h3>Descripción del producto</h3>
           <p>{itemDetail.title}</p>
+          <p className='text-sm'>{itemDetail.warranty} ✅</p>
         </div>
 
         <div className='item-details__section-right flex flex-col'>
